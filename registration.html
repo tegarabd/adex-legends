@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADEX Legends</title>
+    <link rel="icon" href="assets/svg/apex-white-icon.svg">
+    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/registration.css">
+    <script src="js/script.js" type="module"></script>
+    <script src="js/registration.js" defer></script>
+</head>
+<body>
+
+    <section class="section__registration">
+
+        <div class="error__popup" id="errorPopup">
+            <i class='bx bx-x' id="closeBtn"></i>
+            <div id="errorTexts">
+
+            </div>
+        </div>
+
+        <div class="registration">
+
+            <h2 class="registration__title">REGISTER</h2>
+
+            <form action="" class="registration__form">
+
+                <input type="text" id="username" placeholder="USERNAME">
+                <input type="text" id="fullname" placeholder="FULLNAME">
+                <input type="email" id="email" placeholder="EMAIL">
+                <input type="password" id="password" placeholder="PASSWORD">
+                <div class="input__group">
+                    <label for="male">MALE</label>
+                    <input type="radio" name="gender" id="male">
+                    <label for="female">FEMALE</label>
+                    <input type="radio" name="gender" id="female">
+                </div>
+                <textarea id="address" placeholder="ADDRESS" cols="30" rows="10"></textarea>
+                <input type="submit" value="SUBMIT" id="submit">
+
+            </form>
+
+        </div>
+
+    </section>
+    
+</body>
+</html>

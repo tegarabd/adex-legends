@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --black: #1b1b1b;
+    --black-dim: #292929;
+    --white: #f3f3f3;
+    --white-dim: #cccccc;
+    --red: #c91a1a;
+    --red-dim: #883838;
+    --blue: #2e2e7e;
+    --grey: #4b4b4b;
+    --black-shadow: rgba(0,0,0,0.5);
+    --section-padding: 20rem;
+    --nav-height: 5rem;
+    --nav-padding: 4rem;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    color: var(--white);
+    padding-top: var(--nav-height);
+}
+
+a {
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1500px) {
+    :root {
+        --section-padding: 5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    :root {
+        --section-padding: 1rem;
+        --nav-padding: 1rem;
+    }
+}

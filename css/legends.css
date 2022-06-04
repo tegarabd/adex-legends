@@ -1,0 +1,52 @@
+.section__legends {
+    padding: 5rem var(--section-padding);
+    background-image: radial-gradient(var(--red), var(--black));
+}
+
+.legends__title {
+    font-size: 5rem;
+    font-weight: 900;
+    position: relative;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.legends__title::after {
+    content: '';
+    position: absolute;
+    top: 6rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 16rem;
+    height: 1rem;
+    background-color: var(--red);
+}
+
+.legends__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.legend__card {
+    max-width: 24rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.legend__text {
+    border-top: 0.5rem solid var(--grey);
+    border-left: 0.5rem solid var(--grey);
+    border-right: 0.5rem solid var(--black-dim);
+    border-bottom: 0.5rem solid var(--black-dim);
+    max-width: 16rem;
+    background-color: var(--white-dim);
+    color: var(--black);
+    padding: 0.5rem 1rem;
+}
+
+.legend__name, .legend__desc {
+    text-align: center;
+}

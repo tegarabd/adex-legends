@@ -1,0 +1,119 @@
+.nav {
+    background-color: var(--black);
+    padding: 0.5rem var(--nav-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: var(--nav-height);
+    top: 0;
+    z-index: 100;
+}
+
+.subnav {
+    display: flex;
+    justify-content: space-between;
+    min-width: 29rem;
+    gap: 1rem;
+}
+
+.nav__item {
+    display: flex;
+    align-items: center;
+}
+
+.nav__group {
+    width: 16rem;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.nav__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nav__logo__small {
+    font-size: 0.7rem;
+}
+
+.nav__logo__small::before, .nav__logo__small::after {
+    content: "--";
+}
+
+.nav__link {
+    font-weight: 500;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav__link i {
+    font-size: 1.2rem;
+    margin-right: .5rem;
+}
+
+.nav__link::before {
+    content: '';
+    width: 0;
+    height: 2rem;
+    background-color: var(--red);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -45%);
+    z-index: -1;
+    transition: 300ms ease-in-out;
+}
+
+.nav__link:hover::before {
+    width: 150%;
+}
+
+#menuBtn {
+    font-size: 2rem;
+    display: none;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .subnav {
+        position: absolute;
+        top: -12rem;
+        right: var(--nav-padding);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        min-width: min-content;
+        background-color: var(--black);
+        padding: 0 2rem 2rem 2rem;
+        opacity: 0;
+        gap: 2rem;
+        transition: 300ms ease-in-out;
+    }
+
+    .subnav.show {
+        top: var(--nav-height);
+        opacity: 1;
+    }
+
+    .nav__group {
+        flex-direction: column;
+        align-items: flex-end;
+        width: 6rem;
+        margin-bottom: 2rem;
+    }
+
+    .nav__link {
+        align-items: flex-end;
+    }
+
+    #menuBtn {
+        display: initial;
+    }
+
+}

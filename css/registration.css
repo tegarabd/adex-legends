@@ -1,0 +1,124 @@
+
+.section__registration {
+    position: relative;
+    padding: 5rem var(--section-padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: -webkit-linear-gradient(30deg, var(--red) 50%, var(--grey) 50%);
+    min-height: calc(100vh - var(--nav-height));
+}
+
+.error__popup {
+    opacity: 0;
+    position: absolute;
+    top: 2rem;
+    right: var(--section-padding);
+    background-color: var(--red);
+    z-index: 3;
+    padding: 1rem;
+    user-select: none;
+    transition: 300ms ease-in-out;
+    max-width: 16rem;
+}
+
+.error__popup.show {
+    opacity: 1;
+    user-select: initial;
+}
+
+.error__popup p {
+    margin: 0.5rem;
+}
+
+.error__popup i {
+    width: 100%;
+    text-align: end;
+    font-size: 2rem;
+}
+
+#closeBtn {
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+.registration {
+    padding: 2rem;
+    background-color: var(--black);
+    min-width: 20rem;
+}
+
+.registration__title {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.registration__title::after {
+    content: '';
+    background-color: var(--red);
+    width: 8rem;
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+.registration__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+    column-gap: 0.5rem;
+}
+
+.input__group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+input, textarea, label {
+    border: none;
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    padding: 0.5rem;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type=radio] {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+#submit {
+    cursor: pointer;
+}
+
+#address, #submit {
+    grid-column: span 2;
+}
+
+@media screen and (max-width: 700px) {
+    .registration {
+        padding: 1rem;
+    }
+
+    .registration__title::after {
+        width: 5rem;
+    }
+
+    .registration__form {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+        column-gap: 0.25rem;
+    }
+
+    #address, #submit {
+        grid-column: span 1;
+    }
+}
